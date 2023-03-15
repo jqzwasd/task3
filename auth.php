@@ -12,7 +12,7 @@
 <body>
 <nav>
         <ul>
-        <li>
+            <li>
                 <a href="index.php">Главная</a>
             </li>
             <li>
@@ -29,9 +29,12 @@
 <main>
     <div>
         <h2>Это Главная</h2>
-        <h2>Тут ничего нет</h2>
     </div>
-   
+    <form action="" method="get">
+            <input type="text" name = "name">
+            <input type="password" name = "password">
+            <input type="submit" value = "войти">
+        </form>
 </main>
     <footer>
     Sokolov Timofey

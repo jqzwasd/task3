@@ -4,15 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href = "style.css" rel="stylesheet" type="text/css">
     <title>Document</title>
 </head>
-<header>
-</header>
 <body>
-<nav>
+    <nav>
         <ul>
-        <li>
+            <li>
                 <a href="index.php">Главная</a>
             </li>
             <li>
@@ -26,17 +23,12 @@
             </li>
         </ul>
 </nav>
-<main>
+    <main>
     <div>
-        <h2>Это Главная</h2>
-        <h2>Тут ничего нет</h2>
+        <h2>Это скрытая страница</h2>
+        <h2>Поздравляю, но тут тоже ничего нет</h2>
     </div>
-   
-</main>
-    <footer>
-    Sokolov Timofey
-    </footer>
+    
+    </main>
 </body>
-
-
 </html>
