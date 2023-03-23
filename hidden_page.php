@@ -2,6 +2,12 @@
 <?PHP
 $title = "задание веб";
 $page_title = "Это секретная страница";
-$content = "Тут будет доска объявлений";
-include("components/layout.php");
+
+require_once __DIR__.'/boot.php';
+$stmt = pdo() ->("SELECT * FROM users");
+$content = "";
+while ($row = $stmt -> fetch()){
+    echo $row["id"];
+}
+include("content/layout.php");
 ?>
