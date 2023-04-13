@@ -27,6 +27,9 @@
             <li>
                 <a href="hidden_page.php">Скрытая страница</a>
             </li>
+            <li>
+                <a href="addTask.php">Tasks</a>
+            </li>
         </ul>
 </nav>
 <main>
