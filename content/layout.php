@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href = "style.css" rel="stylesheet" type="text/css">
-    <title><? = $title ?></title>
+    <title><?=$title?></title>
 </head>
 
 <body>
     <header>
         <h2>
-            <? = $page_title ?> 
+            <?=$page_title?> 
         </h2>
     </header>
 <nav>
@@ -32,10 +31,10 @@
 </nav>
 <main>
     <div>
-        <?= $content ?>
+        <?= $content?>
 </main>
     <footer>
-    Sokolov Timofey
+    Sokolov Timofey gr 2012
     </footer>
 </body>
 </html>
