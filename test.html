@@ -8,39 +8,36 @@
 </head>
 <body>
     <form action="">
-        <textarea name="text_text" id="text_test" cols="30" rows="10"></textarea>
+        <textarea name="text_test" id="text_test" cols="30" rows="10"></textarea>
     </form>
-    <button onclick="read()">получить данные</button>
-    <button onclick="send()">отправить данные</button>
+    <button onclick="send()">send data</button>
+    <button onclick = "read()">get data</button>
     <script>
-        async function read()
-        {
-            console.log("привет!");
-            let response = await fetch("test.php");
-            if (response.ok) { // если HTTP-статус в диапазоне 200-299
-            // получить тело
-            // получаем тело ответа (см. про этот метод ниже)
-            let answer= await response.text();
-            console.log(answer);
-            } else {
-            alert("Ошибка HTTP: " + response.status);
+        async function read(){
+            console.log("hi");
+            let response = await fetch("test.php")
+            if(response.ok){
+                let answer = await response.text();
+                console.log(answer);
+                textFromServer.innerHTML = answer;
             }
+            else{
+                console.log("Ошибка HTTP: " + response.status);
+            }
+
         }
-        async function send()
-        {
-            let response = await fetch("test.php", {
-                method: 'POST',
-                body: new FormData(document.forms[0])
-                } );
-            if (response.ok) { // если HTTP-статус в диапазоне 200-299
-            // получить тело
-            // получаем тело ответа (см. про этот метод ниже)
-            let answer= await response.text();
-            console.log(answer);
-            } else {
-            alert("Ошибка HTTP: " + response.status);
+        async function send(){
+            let response = await fetch("test.php",{method: 'POST', body: new FormData(document.forms[0])});
+            if(response.ok){
+                let answer = await response.text();
+                console.log(answer);
+                textFromServer.innerHTML = answer;
+            }
+            else{
+                console.log("Ошибка HTTP: " + response.status);
             }
         }
     </script>
+    
 </body>
 </html>
