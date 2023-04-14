@@ -1,6 +1,6 @@
 <?PHP
 $title = "веб - технологии";
-$page_title = "Вход";
+$page_title = "Tasks";
 $content = "
 <form action = '' metod = 'post'>
     <textarea name = 'task'></textarea>
@@ -9,10 +9,10 @@ $content = "
 ";
 require("content/layout.php");
 require("boot.php");
-if (isset($_SESSION['Login']) and isset($_SESSION['Password']) and isset($_POST['task'])) {
+if (isset($_SESSION['login']) and isset($_SESSION['password']) and isset($_POST['task'])) {
     
-    $id = $_SESSION['ID'];
-    $pas = $_SESSION['Password'];
+    $id = $_SESSION['id'];
+    $pas = $_SESSION['password'];
     $task = $_POST['task'];
     
     // require_once __DIR__ . '/boot.php';

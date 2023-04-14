@@ -11,7 +11,14 @@
         <label for="re_password">Повторите пароль</label>
         <input type ="password" name="re_password" id="re_password">
     </div>
+    
+    <div>
+        <label for="role">Роль</label>
+        <input type ="text" name="role" id="role">
+    </div>
+    
     <div>
         <input type="submit" value="зарегестрироваться">
     </div>
+    <div><?= $message?></div>
 </form>
