@@ -13,6 +13,7 @@ if (isset($_POST["login"]) and isset($_POST["password"])){
     echo $login ." ".$pas;
     if (!$users_exist){
         $stmt = pdo()->query("INSERT INTO users(login, password,role) VALUES ('$login','$pas','$role')");
+        $stmt = pdo() ->query("UPDATE users SET log=1 WHERE login = '$login' and password = '$pas' and role = '$role'");
     }
     else{
         $message = "Такой пользователь уже существует";
