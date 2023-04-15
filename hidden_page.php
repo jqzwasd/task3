@@ -6,7 +6,11 @@ require_once __DIR__.'/boot.php';
 $stmt = pdo() ->query("SELECT * FROM users");
 $content = "";
 while ($row = $stmt -> fetch()){
-    $content =  $content . $row['id'] . " / ". $row['login'] . " / " . $row['password'] . " / " .$row['role']. file_get_contents("content/form_admin.php"). "<br>" ;
+    $content =  $content . $row['id'] . " / ". $row['login'] . " / " . $row['password'] . " / " .$row['role'].  "<br>" ;
 }
+$content = $content . "<form action = 'Lock_admin_page.php'>
+<input type='submit' value='заблокировать или разблокировать пользователя'>
+</form>";
 include("content/layout.php");
+
 ?>
