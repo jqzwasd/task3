@@ -33,6 +33,9 @@
     <div>
         <?= $content?>
     </div>
+    <form action = 'exit.php' method ='post'>  
+        <input name="exit" type="submit" value="Выйти" />
+    </form>
 </main>
     <footer>
     Sokolov Timofey gr 2012

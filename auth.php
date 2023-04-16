@@ -16,7 +16,7 @@ if(isset($_POST["login"])and isset($_POST["password"])){
         print_r(array_values($users));
     }
     
-    $admin = pdo()->query("select * from `users` where '$login' = login and '$pas' = password and role = 'admin' ")->fetch(PDO::FETCH_ASSOC);
+    $admin = pdo()->query("select * from `users` where '$login' = login and '$pas' = password and role = 'admin' and log='1'")->fetch(PDO::FETCH_ASSOC);
     if($admin){
         header('Location: hidden_page.php');
     }
@@ -24,9 +24,7 @@ if(isset($_POST["login"])and isset($_POST["password"])){
     if($user){
         header('Location: addTask.php');
     }
-    else{
-        header('Location: index.php');
-    }
+    
 }
 
 require("content/layout.php");
