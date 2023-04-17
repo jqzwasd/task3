@@ -2,6 +2,7 @@
 $title = "задание веб";
 $page_title = "Страница блокировки пользователя";
 $content = file_get_contents("content/form_admin.php");
+$content2="";
 require("content/layout.php");
 require("boot.php");
 if(isset($_POST['lock'])){

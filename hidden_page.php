@@ -5,6 +5,7 @@ $page_title = "Это секретная страница";
 require_once __DIR__.'/boot.php';
 $stmt = pdo() ->query("SELECT * FROM users");
 $content = "";
+$content2="";
 while ($row = $stmt -> fetch()){
     $content =  $content . $row['id'] . " / ". $row['login'] . " / " . $row['password'] . " / " .$row['role'].  "<br>" ;
 }

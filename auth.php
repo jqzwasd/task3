@@ -2,6 +2,7 @@
 $title = "Авторизация";
 $page_title = "Вход";
 $content = file_get_contents("content/form_auth.php");
+$content2="";
 require("boot.php");
 if(isset($_POST["login"])and isset($_POST["password"])){
     $login = $_POST["login"];

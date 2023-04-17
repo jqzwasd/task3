@@ -8,6 +8,10 @@ $content = "
     <input type='submit'>
 </form>
 ";
+$content2 = "<form action = '' method = 'post'>
+<input type='submit' name = 'submit' value ='мои задания'>
+</form>";
+
 require("content/layout.php");
 
 
@@ -19,7 +23,10 @@ if (isset($_SESSION['login']) and isset($_SESSION['password']) and isset($_POST[
     
   
     $stmt = pdo()->query("INSERT INTO `tasks`(`id`, `task`) VALUES ('$id','$task')");
+}
 
+if (isset($_POST['submit'])){
+    header('Location: My_tasks.php');
 }
 
 ?>
